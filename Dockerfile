@@ -15,5 +15,5 @@ ADD init.sql /root/
 RUN sh /root/install.sh
 
 EXPOSE 3306
-ENTRYPOINT ["/usr/bin/mysqld"]
+ENTRYPOINT ["/usr/bin/mysqld_safe"]
 CMD ["&"]
