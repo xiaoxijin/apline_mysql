@@ -6,4 +6,7 @@ RUN echo "http://nl.alpinelinux.org/alpine/latest-stable/main" > /etc/apk/reposi
 && echo "http://nl.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories \
 && echo "http://nl.alpinelinux.org/alpine/edge/community/" >> /etc/apk/repositories \
 && echo "nameserver 8.8.8.8" >> /etc/resolv.conf && apk update && apk upgrade \
-&& apk add mysql
+&& apk add mysql mysql-client
+
+
+RUN /usr/bin/mysql_install_db --user=mysql1
