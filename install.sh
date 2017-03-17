@@ -7,5 +7,10 @@
 
 
 apk add mysql-client
-/usr/bin/mysqladmin -u root password 'root'
+/usr/bin/mysqladmin -u root password 'root1234'
+/usr/bin/mysql -uroot -proot1234 < /root/init.sql
+
+
+
+
 

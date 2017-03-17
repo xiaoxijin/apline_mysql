@@ -10,5 +10,6 @@ RUN echo "http://nl.alpinelinux.org/alpine/latest-stable/main" > /etc/apk/reposi
 
 
 ADD install.sh /root/
+ADD init.sql /root/
 
 RUN sh /root/install.sh
