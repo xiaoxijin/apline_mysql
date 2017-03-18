@@ -1,7 +1,7 @@
-apk add mysql-client
+#apk add mysql-client
 #apk del mysql-client
 
-#/usr/bin/mysql_install_db --user=mysql
+/usr/bin/mysql_install_db --user=mysql
 #
 #/usr/bin/mysqld_safe &
 #
