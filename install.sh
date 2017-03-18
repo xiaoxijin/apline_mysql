@@ -1,5 +1,5 @@
 
-
+chmod 777 -R /work
 /usr/bin/mysql_install_db  --user=mysql
 #
 /usr/bin/mysqld_safe &
