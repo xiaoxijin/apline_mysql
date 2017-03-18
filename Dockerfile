@@ -17,5 +17,5 @@ RUN sh /work/install.sh
 
 EXPOSE 3306
 #ENTRYPOINT ["/usr/bin/mysqld_safe"]
-ENTRYPOINT ["/work/mysql.sh","&"]
-CMD ["&"]
+#ENTRYPOINT ["/work/mysql.sh"]
+#CMD ["&"]
