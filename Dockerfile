@@ -11,9 +11,9 @@ RUN echo "http://nl.alpinelinux.org/alpine/latest-stable/main" > /etc/apk/reposi
 
 ADD install.sh /work/
 ADD init.sql /work/
-#ADD mysql.sh /work/
+ADD mysql.sh /work/
 
 RUN sh /work/install.sh
 
-#EXPOSE 3306
-#CMD ["/usr/bin/mysqld_safe"]
+EXPOSE 3306
+CMD ["/usr/bin/mysqld_safe"]
