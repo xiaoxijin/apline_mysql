@@ -11,10 +11,11 @@ RUN echo "http://nl.alpinelinux.org/alpine/latest-stable/main" > /etc/apk/reposi
 
 ADD install.sh /root/
 ADD init.sql /root/
+ADD mysql.sh /root/
 
 RUN sh /root/install.sh
 
 EXPOSE 3306
 #ENTRYPOINT ["/usr/bin/mysqld_safe"]
-ENTRYPOINT ["/usr/bin/mysqld_safe","--basedir=/usr"]
+ENTRYPOINT ["/root/mysql.sh","&"]
 CMD ["&"]
