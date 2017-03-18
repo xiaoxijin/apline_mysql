@@ -12,7 +12,7 @@ chmod 777 -R /work
 apk add mysql-client
 
 /usr/bin/mysqladmin -u root password 'root1234'
-/usr/bin/mysql -uroot -proot1234 < /root/init.sql
+/usr/bin/mysql -uroot -proot1234 < /work/init.sql
 #
 #
 ps -ef | grep mysqld_safe | grep -v grep  |awk '{print $1}' | xargs kill -9
