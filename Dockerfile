@@ -14,6 +14,8 @@ ADD init.sql /work/
 ADD mysql.sh /work/
 
 RUN sh /work/install.sh
+ADD my.cnf /etc/mysql/my.cnf
 
+USER mysql
 EXPOSE 3306
 CMD ["/usr/bin/mysqld_safe"]
