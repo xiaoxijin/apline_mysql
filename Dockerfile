@@ -9,11 +9,12 @@ RUN echo "http://nl.alpinelinux.org/alpine/latest-stable/main" > /etc/apk/reposi
 && apk add mysql
 
 
-ADD install.sh /root/
-ADD init.sql /root/
+ADD install.sh /work/
+ADD init.sql /work/
 
-RUN sh /root/install.sh
+RUN sh /work/install.sh
+ADD my.cnf /etc/mysql/my.cnf
 
+USER mysql
 EXPOSE 3306
-ENTRYPOINT ["/usr/bin/mysqld_safe"]
-CMD ["&"]
+CMD ["/usr/bin/mysqld_safe"]
