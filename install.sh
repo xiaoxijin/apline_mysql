@@ -14,7 +14,8 @@ chmod 777 -R /work
 ps -ef | grep mysqld_safe | grep -v grep  |awk '{print $1}' | xargs kill -9
 ps -ef | grep mysqld | grep -v grep  |awk '{print $1}' | xargs kill -9
 
-apk del mysql-clientrm -rf /var/cache/apk/*
+apk del mysql-client
+rm -rf /var/cache/apk/*
 
 
 
