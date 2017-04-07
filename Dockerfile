@@ -6,10 +6,9 @@ Maintainer Xijin Xiao (http://github.com/xiaoxijin/)
 RUN apk add mysql
 
 
-ADD install.sh /work/
-ADD init.sql /work/
-
-RUN sh /work/install.sh
+ADD install.sh $WORK_DIR
+ADD init.sql $WORK_DIR
+RUN sh ${WORK_DIR}install.sh
 ADD my.cnf /etc/mysql/my.cnf
 
 USER mysql
