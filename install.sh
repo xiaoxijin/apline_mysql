@@ -1,7 +1,8 @@
-
+#!/bin/sh
+chmod 777 -R ${WORK_DIR}
 mkdir -p ${WORK_DIR}data/mysql
-/usr/bin/mysql_install_db  --user=mysql
 
+/usr/bin/mysql_install_db  --user=mysql
 
 /usr/bin/mysqld_safe &
 
@@ -16,6 +17,3 @@ ps -ef | grep mysqld | grep -v grep  |awk '{print $1}' | xargs kill -9
 
 
 rm -rf /var/cache/apk/*
-
-
-
